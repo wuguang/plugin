@@ -5,7 +5,8 @@
     }
 
     init(){
-        if(location.href.indexOf('https://www.baidu.com/s?')>-1){
+     
+        if(location.href.indexOf('https://www.baidu.com')>-1){
             this.initDeleteNode();
             this.addEvent();
         }
@@ -14,6 +15,7 @@
     initDeleteNode(){
         let target = this.$('content_right');
         this.initExeTime += 30;
+        
         if(target){
             this.deleteNode();
         }else{
